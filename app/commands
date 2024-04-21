@@ -1,0 +1,18 @@
+
+mkdir charts  
+cd charts 
+
+helm create youtube-stats-chart #create charts
+
+minikube start  #make sure kubernetes is running 
+
+helm install youtube-stats ./youtube-stats-chart #Install
+helm list #list container
+
+helm uninstall youtube-stats #Uninstall container
+helm upgrade youtube-stats #Uninstall container
+kubectl get pods 
+kubectl get nodes
+
+kubectl port-forward service/my-lb-service 10101:80
+http://localhost:10101/youtube/channel/stats
