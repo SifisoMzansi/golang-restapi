@@ -7,8 +7,8 @@ name: ci
 
 on:
   push:
-    tags:
-      - '*'
+    branches:
+      - 'main'
 
 jobs:
   docker:
